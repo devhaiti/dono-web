@@ -3,6 +3,10 @@
   @apply bg-clip-text text-transparent bg-gradient-to-tr from-purple-400 to-primary-500;
 }
 
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
 .text--shadow {
   @apply filter drop-shadow-lg md:drop-shadow-2xl;
 }

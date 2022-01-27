@@ -66,7 +66,7 @@ const Layout = ({ children, title, fullTitle, description, ogImage, animate, wit
 
       {withHeader && <Header />}
 
-      <main className='flex-grow'>
+      <main className='flex-grow' style={{"background": "linear-gradient(120deg, #daae51 0%, #d53369 100%)"}}>
         {(animate && (
           <motion.div
             initial='initial'
