@@ -1,14 +1,14 @@
 export const siteMeta = {
-  defaultTitle: 'Next.js Tailwind Starter',
-  description: `A starter for Next.js with Tailwind CSS and Typescript`,
+  defaultTitle: 'dono',
+  description: `Tying remittance to descision making`,
   imageUrl: '/images/og-image.png',
-  twitterUsername: '@riipandi',
+  twitterUsername: '@donoapp',
 
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:300',
   maintenance: process.env.MAINTENANCE_MODE || false,
 
   socials: {
-    GitHub: 'https://github.com/riipandi',
-    Twitter: 'https://twitter.com/riipandi'
+    GitHub: 'https://github.com/devhaiti',
+    Twitter: 'https://twitter.com/donoapp'
   }
 }

@@ -12,6 +12,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   poweredByHeader: false,
+  trailingSlash: true,
   async rewrites() {
     return [
       { source: '/bee.js', destination: 'https://cdn.splitbee.io/sb.js' },

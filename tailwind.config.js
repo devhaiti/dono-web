@@ -17,7 +17,8 @@ module.exports = {
       colors: {
         gray: defaultColor.neutral,
         primary: defaultColor.blue,
-        secondary: defaultColor.indigo
+        secondary: defaultColor.indigo,
+        rose: defaultColor.rose
       },
       typography: (theme) => ({
         default: {
