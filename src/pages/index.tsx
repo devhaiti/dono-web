@@ -1,80 +1,132 @@
-import Image from 'next/image'
-import { useTheme } from 'next-themes'
+import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
 
-import { siteMeta } from '@/libraries/config'
+/* This example requires Tailwind CSS v2.0+ */
+import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 
-import { Maintenance } from '@/components/Elements'
-import { BasicLink, ThemeSwitcher } from '@/components/Essentials'
-import { Layout } from '@/components/SiteLayout'
+const features = [
+  {
+    name: 'Competitive exchange rates',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'No hidden fees',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: ScaleIcon,
+  },
+  {
+    name: 'Transfers are instant',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: LightningBoltIcon,
+  },
+  {
+    name: 'Mobile notifications',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: AnnotationIcon,
+  },
+]
+
 
 export default function Home() {
-  const { theme } = useTheme()
-
-  if (siteMeta.maintenance === true) {
-    return <Maintenance />
-  }
-
   return (
-    <Layout fullTitle='This is Next.js Tailwind Starter' withHeader withFooter animate>
-      <div className='flex flex-col items-center justify-center min-h-screen py-20 lg:py-30'>
-        <div className='top-0 left-0 hidden mt-32 lg:block lg:absolute'>
-          <Image src='https://shuffle.dev/zeus-assets/icons/dots/blue-dot-left-bars.svg' width={300} height={300} alt='' />
-        </div>
-        <div className='hidden h-16 mt-4 ml-auto lg:absolute'>
-          <Image
-            src='https://shuffle.dev/zeus-assets/icons/dots/yellow-dot-right-shield.svg'
-            width={200}
-            height={200}
-            alt=''
-          />
-        </div>
-        <div className='top-0 right-0 hidden mt-64 lg:block lg:absolute'>
-          <Image
-            src='https://shuffle.dev/zeus-assets/icons/dots/yellow-dot-right-shield.svg'
-            width={300}
-            height={300}
-            alt=''
-          />
-        </div>
-        <div className='container relative px-4 mx-auto'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-xl font-medium dark:text-primary-50 text-secondary-500'>{siteMeta.defaultTitle}</h2>
-            <h1 className='mt-6 mb-6 text-4xl font-bold lg:text-5xl text--gradient text--shadow lg:mb-10'>
-              Welcome to your Next site!
-            </h1>
-            <p className='mb-4 text-xl leading-8 text-gray-900 lg:mb-6 dark:text-gray-400'>
-              This is a starter for Next.js with Tailwind CSS and Typescript, already pre-configured with TailwindUI and some
-              additional components.
-            </p>
-            <p className='mb-6 text-xl leading-8 text-gray-900 dark:text-gray-400 lg:mb-12'>
-              You can{' '}
-              <BasicLink
-                href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Friipandi%2Fnext-tailwind-starter'
-                className='underline text-primary-500 dark:text-primary-100 decoration-primary-500 hover:text-gray-900'
-                newTab
-              >
-                deploy your own to Vercel &rarr;
-              </BasicLink>
-            </p>
-            <div className='flex justify-center mx-auto space-x-4'>
-              <BasicLink href='/about' className='inline-block px-5 text-sm btn btn--primary btn--md'>
-                About page
-              </BasicLink>
-              <BasicLink href='/empty' className='inline-block w-full px-5 text-sm btn btn--outline btn--md'>
-                Empty page
-              </BasicLink>
+      <>
+        {/* Hero section */}
+        <div className="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
+          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
+            <div>
+              <div>
+                <img className="h-11 w-auto" src="/images/logotype_b.png" alt="Logo" />
+              </div>
+              <div className="mt-20">
+                <div className="mt-6 sm:max-w-xl">
+                  <h1 className="text-4xl font-extrabold text-gray-700 tracking-tight sm:text-5xl">
+                    Bridging the gaps in the tech journey for all Haitians
+                  </h1>
+                  <p className="mt-6 text-xl text-gray-500">
+                    We're on a mission to turn Haiti into the engineering powerhouse of the caribbea and empowering Haitian technologists to solve some of our most difficult challenges.
+                  </p>
+                </div>
+                <form action="#" className="mt-12 sm:max-w-lg sm:w-full sm:flex">
+                  <div className="mt-4 sm:mt-0">
+                    <iframe src="https://discord.com/widget?id=720382170245496862&theme=dark" width="350" height="70" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-          <div className='flex justify-center mx-auto mt-2'>
-            <div className='inline-flex items-center justify-center mx-auto mt-12'>
-              <ThemeSwitcher iconSize={5} />
-              <span className='ml-3 -mr-1 font-medium text-gray-900 dark:text-gray-400'>
-                Toggle {theme === 'dark' ? 'Light' : 'Dark'} Mode
-              </span>
+
+          <div className="sm:mx-auto sm:max-w-3xl sm:px-6">
+            <div className="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+              <div className="hidden sm:block">
+                <div className="absolute inset-y-0 left-1/2 w-screen bg-gray-50 rounded-l-3xl lg:left-80 lg:right-0 lg:w-full" />
+                <svg
+                  className="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0"
+                  width={404}
+                  height={392}
+                  fill="none"
+                  viewBox="0 0 404 392"
+                >
+                  <defs>
+                    <pattern
+                      id="837c3e70-6c3a-44e6-8854-cc48c737b659"
+                      x={0}
+                      y={0}
+                      width={20}
+                      height={20}
+                      patternUnits="userSpaceOnUse"
+                    >
+                      <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                    </pattern>
+                  </defs>
+                  <rect width={404} height={392} fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" />
+                </svg>
+              </div>
+              <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
+                {/* <img
+                  className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
+                  src="https://tailwindui.com/img/component-images/task-app-rose.jpg"
+                  alt=""
+                /> */}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Layout>
+
+        {/* CTA */}
+        <div className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
+              <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                A better way to send remittances
+              </p>
+              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
+                accusamus quisquam.
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                {features.map((feature) => (
+                  <div key={feature.name} className="relative">
+                    <dt>
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <feature.icon className="h-6 w-6" aria-hidden="true" />
+                      </div>
+                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
+                    </dt>
+                    <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </>
   )
 }
