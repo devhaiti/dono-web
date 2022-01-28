@@ -51,15 +51,20 @@ export default function Home() {
               <div className="mt-20">
                 <div className="mt-6 sm:max-w-xl">
                   <h1 className="text-4xl font-extrabold text-gray-700 tracking-tight sm:text-5xl">
-                    Dono is really and very special about something
+                    The future is in your hand
                   </h1>
                   <p className="mt-6 text-xl text-gray-500">
-                    We're on a mission to turn Haiti into the engineering powerhouse of the caribbea and empowering Haitian technologists to solve some of our most difficult challenges.
+                    Support your family. Invest in your country. Unlift your people.
                   </p>
                 </div>
                 <form action="#" className="mt-12 sm:max-w-lg sm:w-full sm:flex">
                   <div className="mt-4 sm:mt-0">
-                    <button className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">Call to action</button>
+                    <a href="#">
+                      <img width="220" style={{'display': 'inline'}} src="https://mpng.subpng.com/20180802/ohu/kisspng-rointe-connect-app-for-smart-control-rointe-heat-5b630e4be3b018.1228412915332183799326.jpg" />
+                    </a>
+                    <a href="#">
+                      <img width="240" style={{'display': 'inline'}} src="https://lh3.googleusercontent.com/proxy/4eoNrOrrllI-SgkCsk_ahKq2cj0n-qIFLhj321uwegPRH7-nuHGnA7yvkKCVpneWBf5mkvXptv5SuDw46J51MEkHOGTkpYGHKvHC1IawjaNXWrQ2_5fL2LDQxXvzQ1Q31W46nfEOFswceq6aPEwGZ2sHi_idoEalaQfYIiZGiM9rynmMAqsGRLggW6A5YqId38lxQ6osjFSsQJX78XyPHCWdkznYiTpSFij0sN9wBWv7vUh6BHyY_1GVVXJdK9MC-jGiuMQBo96D7sLFHtSNu-ASqlvXO91Gfx1CARqMNC4K=s0-d" />
+                    </a>
                   </div>
                 </form>
               </div>
